@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://scrolling_picture/scroller.gd" id="1_dhltd"]
 [ext_resource type="Shader" path="res://scrolling_picture/scrolling_picture.gdshader" id="2_aj7bk"]
-[ext_resource type="Texture2D" uid="uid://cht3dmynshlqa" path="res://icon.svg" id="3_4ue3m"]
+[ext_resource type="Texture2D" uid="uid://b0co2afukvg0i" path="res://scrolling_picture/north_pole_sky.png" id="3_614lc"]
 [ext_resource type="Script" path="res://scrolling_picture/scrolling_picture.gd" id="4_fygbo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cw2mm"]
 shader = ExtResource("2_aj7bk")
 shader_parameter/scroll = 0.0
-shader_parameter/picture_size = Vector2(128, 128)
-shader_parameter/rectangle_size = Vector2(1152, 648)
+shader_parameter/picture_size = Vector2(2158, 1024)
+shader_parameter/rectangle_size = Vector2(1264.45, 600)
 
 [node name="Scroller" type="Control"]
 layout_mode = 3
@@ -30,7 +30,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_4ue3m")
+texture = ExtResource("3_614lc")
+expand_mode = 3
 script = ExtResource("4_fygbo")
 
 [node name="GridOverlay" type="TextureRect" parent="."]
