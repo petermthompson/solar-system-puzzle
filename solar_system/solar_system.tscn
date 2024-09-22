@@ -7,14 +7,13 @@
 [node name="SolarSystem" type="Node2D"]
 
 [node name="Sun" parent="." instance=ExtResource("2_3b8sx")]
-modulate = Color(0.752941, 0.752941, 0.752941, 1)
 position = Vector2(573, 359)
 
 [node name="Earth" parent="." instance=ExtResource("1_cmyrj")]
-position = Vector2(818, 286)
+position = Vector2(773, 309)
 
 [node name="Moon" parent="." instance=ExtResource("3_p5rg3")]
-position = Vector2(400, 437)
+position = Vector2(701, 334)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.501961, 0.501961, 0.501961, 1)
