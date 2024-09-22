@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://80qkvyr2rtmr"]
+
+[ext_resource type="PackedScene" uid="uid://qlvu8cpjaauf" path="res://solar_system/earth.tscn" id="1_cmyrj"]
+[ext_resource type="PackedScene" uid="uid://dhsbqn01emddo" path="res://solar_system/sun.tscn" id="2_3b8sx"]
+[ext_resource type="PackedScene" uid="uid://chpejemwxfl3" path="res://solar_system/moon.tscn" id="3_p5rg3"]
+
+[node name="SolarSystem" type="Node2D"]
+
+[node name="Sun" parent="." instance=ExtResource("2_3b8sx")]
+modulate = Color(0.752941, 0.752941, 0.752941, 1)
+position = Vector2(573, 359)
+
+[node name="Earth" parent="." instance=ExtResource("1_cmyrj")]
+position = Vector2(818, 286)
+
+[node name="Moon" parent="." instance=ExtResource("3_p5rg3")]
+position = Vector2(400, 437)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.501961, 0.501961, 0.501961, 1)
