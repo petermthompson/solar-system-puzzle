@@ -13,30 +13,31 @@ script = ExtResource("1_fxtem")
 
 [node name="SunOrbit" type="Node2D" parent="." node_paths=PackedStringArray("suborbit")]
 light_mask = 0
-z_index = -1
 script = ExtResource("4_vxn2m")
 num_points = 1
 suborbit = NodePath("../EarthOrbit")
 
 [node name="EarthOrbit" type="Node2D" parent="." node_paths=PackedStringArray("suborbit")]
+light_mask = 0
 script = ExtResource("4_vxn2m")
 radius = 300.0
 num_points = 13
 suborbit = NodePath("../MoonOrbit")
 
 [node name="MoonOrbit" type="Node2D" parent="."]
+light_mask = 0
 script = ExtResource("4_vxn2m")
 radius = 100.0
 num_points = 28
 
 [node name="Sun" parent="." instance=ExtResource("2_3b8sx")]
+z_index = 1
 
 [node name="Earth" parent="." instance=ExtResource("1_cmyrj")]
+z_index = 2
 
 [node name="Moon" parent="." instance=ExtResource("3_p5rg3")]
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.501961, 0.501961, 0.501961, 1)
+z_index = 3
 
 [node name="DateLabel" type="Label" parent="."]
 light_mask = 0

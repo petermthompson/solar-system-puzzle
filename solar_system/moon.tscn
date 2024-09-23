@@ -21,11 +21,11 @@ script = ExtResource("1_awtqc")
 shape = SubResource("CircleShape2D_01xo7")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-scale = Vector2(1, 1)
 occluder = SubResource("OccluderPolygon2D_f2dli")
 occluder_light_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
 light_mask = 4
 scale = Vector2(0.067, 0.067)
 texture = SubResource("CanvasTexture_adt3p")
