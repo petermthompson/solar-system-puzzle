@@ -25,3 +25,30 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+
+[shader_globals]
+
+sun_position={
+"type": "vec2",
+"value": Vector2(0, 0)
+}
+sun_radius={
+"type": "float",
+"value": 0.0
+}
+earth_radius={
+"type": "float",
+"value": 0.0
+}
+moon_radius={
+"type": "float",
+"value": 0.0
+}
+earth_position={
+"type": "vec2",
+"value": Vector2(0, 0)
+}
+moon_position={
+"type": "vec2",
+"value": Vector2(0, 0)
+}

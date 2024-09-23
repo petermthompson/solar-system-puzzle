@@ -17,6 +17,18 @@ var prev_global_position := Vector2.ZERO
 func _process(delta: float) -> void:
 	position += movement
 	movement = Vector2i.ZERO
+	set_notify_transform(true)
+
+func _ready() -> void:
+	# Update the sun/earth/moon radius shader parameter
+	var circle_shape := collision.shape as CircleShape2D
+	if is_instance_valid(circle_shape):
+		RenderingServer.global_shader_parameter_set(name.to_lower() + "_radius", circle_shape.radius)
+
+func _notification(what: int) -> void:
+	# Update the sun/earth/moon position shader parameter
+	if what == NOTIFICATION_TRANSFORM_CHANGED:
+		RenderingServer.global_shader_parameter_set(name.to_lower() + "_position", global_position)
 
 # Handle user input.
 func _input(event: InputEvent) -> void:
