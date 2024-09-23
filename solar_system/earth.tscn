@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://qlvu8cpjaauf"]
+[gd_scene load_steps=8 format=3 uid="uid://qlvu8cpjaauf"]
 
 [ext_resource type="Script" path="res://solar_system/celestial_body.gd" id="1_81p8f"]
 [ext_resource type="Texture2D" uid="uid://de1r4okwsytfc" path="res://solar_system/earth.png" id="1_u0ep4"]
 [ext_resource type="Texture2D" uid="uid://dvedmpmm6dlpb" path="res://solar_system/normal_map.png" id="3_ojmva"]
+[ext_resource type="Script" path="res://solar_system/modulater.gd" id="4_hw7na"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_01xo7"]
 radius = 30.0
@@ -29,3 +30,4 @@ modulate = Color(0.501961, 0.501961, 0.501961, 1)
 light_mask = 2
 scale = Vector2(0.1, 0.1)
 texture = SubResource("CanvasTexture_hy2x0")
+script = ExtResource("4_hw7na")
