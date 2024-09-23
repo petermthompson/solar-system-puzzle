@@ -1,11 +1,12 @@
 extends Sprite2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var console = JavaScriptBridge.get_interface("console")
+	console.log("Test")
 	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
 		modulate = Color.WHITE
-		JavaScriptBridge.eval("console.log(\'low-end gpu\')")
+		console.log("low-end gpu")
 	else:
 		modulate = Color.WEB_GRAY
-		JavaScriptBridge.eval("console.log(\'high-end gpu\')")
+		console.log("high-end gpu")
