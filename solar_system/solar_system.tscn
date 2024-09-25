@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://80qkvyr2rtmr"]
+[gd_scene load_steps=8 format=3 uid="uid://80qkvyr2rtmr"]
 
 [ext_resource type="PackedScene" uid="uid://qlvu8cpjaauf" path="res://solar_system/earth.tscn" id="1_cmyrj"]
 [ext_resource type="Script" path="res://solar_system/solar_system.gd" id="1_fxtem"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chpejemwxfl3" path="res://solar_system/moon.tscn" id="3_p5rg3"]
 [ext_resource type="Script" path="res://solar_system/orbit.gd" id="4_vxn2m"]
 [ext_resource type="Texture2D" uid="uid://y4l4fcsv2yyb" path="res://solar_system/background.jpg" id="6_entf5"]
+[ext_resource type="Texture2D" uid="uid://bl32fbap4jxq8" path="res://solar_system/quasercide_callout.png" id="7_em5uc"]
 
 [node name="SolarSystem" type="Node2D"]
 script = ExtResource("1_fxtem")
@@ -46,6 +47,18 @@ z_index = -1
 position = Vector2(249, -217)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_entf5")
+
+[node name="Quasercide" type="Sprite2D" parent="."]
+position = Vector2(-545, 212)
+scale = Vector2(0.180272, 0.180272)
+texture = ExtResource("7_em5uc")
+
+[node name="QuasercideLabel" type="Label" parent="."]
+offset_left = -570.0
+offset_top = 158.0
+offset_right = -422.0
+offset_bottom = 181.0
+text = "Quasercide System"
 
 [node name="DateLabel" type="Label" parent="."]
 light_mask = 0

@@ -18,16 +18,14 @@ var earth_i = 0
 var moon_i = 0
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	date_label.visible = false
-	
+func _ready() -> void:	
 	sun_orbit.changed.connect(on_orbit_change)
 	earth_orbit.changed.connect(on_orbit_change)
 	moon_orbit.changed.connect(on_orbit_change)
 	
 	sun_orbit.set_orbiting_body(moon, sun_orbit.snap_points[0])
-	earth_orbit.set_orbiting_body(sun, earth_orbit.snap_points[7])
-	moon_orbit.set_orbiting_body(earth, moon_orbit.snap_points[3])
+	earth_orbit.set_orbiting_body(sun, earth_orbit.snap_points[0])
+	moon_orbit.set_orbiting_body(earth, moon_orbit.snap_points[14])
 
 func on_orbit_change(orbit: Orbit, body: CelestialBody, i: int) -> void:
 	if body == sun:
@@ -41,6 +39,6 @@ func on_orbit_change(orbit: Orbit, body: CelestialBody, i: int) -> void:
 		
 	if sun_correct and earth_correct and moon_correct:
 		date_label.visible = true
-		date_label.text = "2238-" + str(earth_i+1) + "-" + str(moon_i+1)
+		date_label.text = "2238-%02d-%02d" % [13 - earth_i, 28 - moon_i]
 	else:
-		date_label.visible = false
+		date_label.text = "ERR-ERR-ERR"
